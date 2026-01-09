@@ -1,0 +1,36 @@
+#######################################
+# Syntax Coloring Map For YOUNG_32400
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+YOUNG_32400	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+poll	KEYWORD2
+getWindSpeed	KEYWORD2
+getWindDirection	KEYWORD2
+getVIN1Raw	KEYWORD2
+getVIN2Raw	KEYWORD2
+getVIN3Raw	KEYWORD2
+getVIN4Raw	KEYWORD2
+getVIN1_mV	KEYWORD2
+getVIN2_mV	KEYWORD2
+getVIN3_mV	KEYWORD2
+getVIN4_mV	KEYWORD2
+convertToTemperature	KEYWORD2
+getTemperatureVIN1	KEYWORD2
+getTemperatureVIN2	KEYWORD2
+getLastError	KEYWORD2
+setTimeout	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+

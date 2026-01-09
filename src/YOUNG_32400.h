@@ -75,9 +75,10 @@ class YOUNG_32400
     bool _dataValid;
     char _lastError[64];
     
+    // Constants
+    static const int RESPONSE_BUFFER_SIZE = 128;
+    
     // Internal methods
-    bool sendPollCommand();
-    bool readResponse();
     bool parseResponse(char* response);
     void clearError();
     void setError(const char* error);

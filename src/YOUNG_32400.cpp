@@ -7,6 +7,9 @@
 
 #include "YOUNG_32400.h"
 
+// Protocol constants
+const char* RESPONSE_PREFIX = "32400!";
+
 // Constructor
 YOUNG_32400::YOUNG_32400(Stream &serial, char address)
 {
@@ -51,7 +54,7 @@ bool YOUNG_32400::poll()
   
   // Wait for response with timeout
   unsigned long startTime = millis();
-  char response[128];
+  char response[RESPONSE_BUFFER_SIZE];
   int idx = 0;
   bool foundData = false;
   
@@ -94,7 +97,7 @@ bool YOUNG_32400::poll()
 bool YOUNG_32400::parseResponse(char* response)
 {
   // Look for "32400!" prefix
-  char *dataStart = strstr(response, "32400!");
+  char *dataStart = strstr(response, RESPONSE_PREFIX);
   if (dataStart == NULL) {
     // Some configurations might not include the prefix, try parsing anyway
     dataStart = response;

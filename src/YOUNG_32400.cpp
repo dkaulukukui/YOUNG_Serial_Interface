@@ -79,7 +79,7 @@ bool YOUNG_32400::poll()
         }
         
         // Prevent buffer overflow
-        if (idx >= sizeof(response) - 1) {
+        if (idx >= RESPONSE_BUFFER_SIZE - 1) {
           response[idx] = '\0';
           setError("Response buffer overflow");
           return false;
